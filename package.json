@@ -1,10 +1,10 @@
 {
-  "name": "hadi blog thing",
+  "name": "hadi_blog_thing",
   "version": "0.3.0",
   "description": "simple dimple",
   "engines": {
-    "npm":"5.5.1",
-"node":"6.11.1"
+    "npm": "5.5.1",
+    "node": "6.11.1"
   },
   "main": "index.js",
   "scripts": {
