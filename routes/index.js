@@ -33,9 +33,9 @@ router.get("/", function(req, res) {
         if(err) throw(err);
 
         res.render("client/index", {
-            title: "Dimitri Mikadze",
+            title: "Hadi Rickit",
             blogs: blogs,
-            desc: "Dimitri Mikadze Personal Blog",
+            desc: "my website",
             url: "/"
         });
     });

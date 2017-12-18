@@ -19,12 +19,12 @@ mongoose.connect(config.database);
 // template engine
 app.set("view engine", "ejs");
 app.engine("html", require("ejs").renderFile);
-app.set("views", __dirname + "/../client/views");
+app.set("views", __dirname + "/client/views/");
 
 // use
 app.use(helmet());
-app.use(express.static("../client/public"));
-app.use(express.static("../client/app"));
+app.use(express.static("/client/public/"));
+app.use(express.static("/client/app/"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));

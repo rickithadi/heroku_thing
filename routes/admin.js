@@ -18,7 +18,7 @@ router.use(function authenticatedOrNot(req, res, next){
  * Main app page
  */
 router.get("/", function(req, res) {
-    res.render("admin/layouts/app.html");
+    res.render("views/admin/layouts/app.html");
 });
 
 /**
