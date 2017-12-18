@@ -1,0 +1,28 @@
+<% include layouts/header %>
+
+<div id="main-container">
+
+    <div id="mb-container">
+
+        <% blogs.forEach(function(blog) { %>
+
+            <div class="mb-container">
+
+                <a href="/blog/programming/<%= blog.short_name.replace(new RegExp(" ", "g"), "-") %>/<%= blog.id %>">
+                    <h2><%= blog.short_name %></h2>
+                    <h3><%= blog.short_desc %></h3>
+                 </a>
+
+                 <!-- <a href="/blog/programming/<%= blog.short_name.replace(new RegExp(" ", "g"), "-") %>/<%= blog.id%>">   -->
+                    
+                 <!-- </a>  -->
+
+            </div>
+
+        <% }); %>
+
+    </div> <!-- /. end blog container -->
+
+</div> <!-- /. end main container -->
+
+<% include layouts/footer %>
