@@ -23,8 +23,11 @@ app.set("views", __dirname + "/client/views/");
 
 // use
 app.use(helmet());
-app.use(express.static("/client/public/"));
-app.use(express.static("/client/app/"));
+// app.use('client/public', express.static('public'));
+// app.use('client/app', express.static('app'));
+console.log(__dirname);
+app.use(express.static("client/public/"));
+app.use(express.static("client/app/"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));
