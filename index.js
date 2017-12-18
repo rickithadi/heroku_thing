@@ -22,7 +22,7 @@ app.engine("html", require("ejs").renderFile);
 app.set("views", __dirname + "/client/views/");
 
 // use
-app.use(helmet());
+//app.use(helmet());
 // app.use('client/public', express.static('public'));
 // app.use('client/app', express.static('app'));
 console.log(__dirname);
