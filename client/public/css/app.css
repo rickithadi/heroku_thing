@@ -2,43 +2,61 @@
 /* Main Color Variables */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+
+a { text-decoration: none; margin: 0 10px; }
 body, html {
-  margin: 0;
+  
+  margin : 0;
   padding: 0; }
 
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #D3D3D3;
-  font-family: 'PT Sans', sans-serif;
-  background-image: url("../images/spaceboi.jpg"); }
 
+  body {
+   
+    width                : 100%;
+    height               : 100%;
+    background-size      : 40% 100%;
+    padding-top          : 0%;
+    padding-bottom       : 0%;
+    background-color     : rgb(0, 0, 0);
+    background-attachment: fixed;
+    font-family          : 'PT Sans', sans-serif;
+    background-position  : 150px 250px;
+    background-repeat    : repeat-x;
+    background-image     : url("../images/spaceboi.jpg");
+
+  
+ }
+
+  img {
+    border-radius: 50%;
+}
 .dancing {
   font-family: 'Dancing Script', cursive; }
 
 /* Header */
 header {
-  position: absolute;
-  top: 0;
-  height: 100px;
-  width: 100%;
+
+  position        : absolute;
+  top             : 0;
+  height          : 100px;
+  width           : 100%;
   background-color: #ffffff;
-  text-align: center; }
+  text-align      : center; }
   header a {
-    display: block;
+    display        : block;
     text-decoration: none;
-    font-size: 30px;
-    margin-top: 30px;
-    margin-left: 20px;
-    color: #ffffff;
-    text-align: center;
-    color: #111111; }
+    font-size      : 30px;
+    margin-top     : 30px;
+    margin-left    : 20px;
+    color          : #ffffff;
+    text-align     : center;
+    color          : #111111; }
 
 /* Footer */
 footer {
-  text-align: center;
-  margin-top: 200px;
-  margin-bottom: 20px; }
+  text-align   : center;
+  margin-top   : 200px;
+  margin-bottom: 100px; }
   footer p:first-child {
     font-size: 30px; }
   footer p {
@@ -46,29 +64,29 @@ footer {
   footer .social-icons {
     margin-top: 15px; }
     footer .social-icons a {
-      margin: 0 3px;
-      font-size: 28px;
+      margin         : 0 3px;
+      font-size      : 28px;
       text-decoration: none;
-      color: #cccccc; }
+      color          : #cccccc; }
       footer .social-icons a:hover {
         color: #ffffff; }
 
 /* Main Container */
 #main-container #mb-container {
-  margin: 200px auto 0 auto;
+  margin   : 200px auto 0 auto;
   max-width: 960px;
-  color: #ffffff; }
+  color    : #ffffff; }
 #main-container .mb-container {
-  margin: 0 auto;
-  max-width: 600px;
-  text-align: center;
-  margin-bottom: 50px;
+  margin        : 0 auto;
+  max-width     : 600px;
+  text-align    : center;
+  margin-bottom : 50px;
   padding-bottom: 50px;
-  border-bottom: 1px dotted #b70000; }
+  border-bottom : 1px dotted #b70000; }
   #main-container .mb-container:last-child {
     border: none; }
   #main-container .mb-container a {
-    color: #ffffff;
+    color          : #ffffff;
     text-decoration: none; }
     #main-container .mb-container a:hover {
       text-decoration: underline; }
@@ -79,36 +97,61 @@ footer {
 
 /* Blog Main Container */
 #bb-m-container #blog-header {
-  width: 100%;
+  width     : 100%;
   text-align: center;
-  color: #ffffff;
-  overflow: hidden;
-  margin: 140px auto 0 auto; }
+  color     : #ffffff;
+  overflow  : hidden;
+  margin    : 140px auto 0 auto; }
 #bb-m-container #bb-container {
-  margin: 50px auto 0 auto;
-  max-width: 920px;
-  color: #111111;
+  margin          : 50px auto 0 auto;
+  max-width       : 920px;
+  color           : #111111;
   background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 50px;
-  overflow: hidden; }
+  padding         : 20px;
+  margin-bottom   : 50px;
+  overflow        : hidden; }
   #bb-m-container #bb-container img {
     width: 100%; }
 #bb-m-container #comments {
-  margin: 0 auto;
-  max-width: 920px;
-  color: #111111;
+  margin          : 0 auto;
+  max-width       : 920px;
+  color           : #111111;
   background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 100px;
-  overflow: hidden; }
+  padding         : 20px;
+  margin-bottom   : 100px;
+  overflow        : hidden; }
 #bb-m-container #blog-header {
   max-width: 920px; }
 #bb-m-container pre {
-  padding: 20px;
-  font-size: 16px;
+  padding   : 20px;
+  font-size : 16px;
   overflow-x: auto; }
 #bb-m-container #bb-container p {
   font-size: 16px; }
 
+
+  a.btn {
+    display              : inline-block;
+    color                : rgb(241, 117, 117);
+    background-color     : rgb(0, 0, 0);
+    text-transform       : uppercase;
+    letter-spacing       : 2px;
+    font-size            : 12px;
+    padding              : 10px 30px;
+    border-radius        : 5px;
+    -moz-border-radius   : 5px;
+    -webkit-border-radius: 5px;
+    border               : 1px solid rgba(0,0,0,0.3);
+    border-bottom-width  : 3px;
+  }
+  
+    a.btn:hover {
+      background-color: #f07878;
+      border-color    : rgba(150, 53, 53, 0.63);
+    }
+    
+    a.btn:active {
+      background-color: #CCC;
+      border-color    : rgba(0,0,0,0.9);
+    }
 /*# sourceMappingURL=app.css.map */

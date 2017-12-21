@@ -29,6 +29,23 @@ router.get("/logout", function(req, res) {
  * Render Main Page
  */
 router.get("/", function(req, res) {
+            res.render("client/home", {
+            title: "Hadi Rickit",
+            desc : "my website",
+            url  : "/"
+        });
+  });
+
+  router.get("/about", function(req, res) {
+    res.render("client/about", {
+    title: "about me",
+    desc : "",
+    url  : "/"
+});
+});
+
+router.get("/blog", function(req, res) {
+   
     blog.find({}).sort({ created_at: -1 }).exec(function(err, blogs) {
         if(err) throw(err);
 
@@ -39,16 +56,6 @@ router.get("/", function(req, res) {
             url  : "/"
         });
     });
-});
-
-router.get("/homie", function(req, res) {
-   
-
-        res.render("client/home", {
-            title: "Hadi Rickit",
-            desc : "my website",
-            url  : "/homie"
-        });
 
 });
 
