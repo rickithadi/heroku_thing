@@ -1,6 +1,6 @@
 var express     = require("express");
-var router      = express.Router();
-var blog        = require("../models/blog");
+var router = express.Router();
+var blog   = require("../models/blog");
 
 /**
  * Render Login Page
@@ -35,10 +35,21 @@ router.get("/", function(req, res) {
         res.render("client/index", {
             title: "Hadi Rickit",
             blogs: blogs,
-            desc: "my website",
-            url: "/"
+            desc : "my website",
+            url  : "/"
         });
     });
+});
+
+router.get("/homie", function(req, res) {
+   
+
+        res.render("client/home", {
+            title: "Hadi Rickit",
+            desc : "my website",
+            url  : "/homie"
+        });
+
 });
 
 /**
@@ -47,47 +58,56 @@ router.get("/", function(req, res) {
 router.get("/blog/programming/:name/:id", function(req, res) {
 
     var name = req.params.name;
-    var id = req.params.id;
+    var id   = req.params.id;
 
     blog.findById(id, function(req, blog) {
        res.render("client/blog/blog", {
            title: name.split('-').join(' '),
-           blog: blog,
-           desc: blog.short_desc,
-           url: "/blog/programming/" + name + "/" + id
+           blog : blog,
+           desc : blog.short_desc,
+           url  : "/blog/programming/" + name + "/" + id
        })
     });
 });
 
 /**
 * Render Sitemap.xml
-*/
-router.get("/sitemap.xml", function(req, res) {
-    blog.find({}).sort({ created_at: -1 }).exec(function(err, blogs) {
+// */
+// router.get("/sitemap.xml", function(req, res) {
+//     blog.find({}).sort({ created_at: -1 }).exec(function(err, blogs) {
 
-        if(err) throw(err);
+//         if(err) throw(err);
 
-        res.setHeader('content-type', 'application/xml');
-        res.render("sitemap", {
-            blogs: blogs
-        });
-    });
-});
+//         res.setHeader('content-type', 'application/xml');
+//         res.render("sitemap", {
+//             blogs: blogs
+//         });
+//     });
+// });
 
 // ========================================================
 //                          Demos
 // ========================================================
 
 router.get("/demos/vanilla-slideshow", function(req, res) {
-    res.render("demos/vanilla-slideshow.html");
+    blog.find({}).sort({ created_at: -1 }).exec(function(err, blogs) {
+        if(err) throw(err);
+
+        res.render("client/home", {
+            title: "Hadi Rickit",
+            blogs: blogs,
+            desc : "my website",
+            url  : "/"
+        });
+    });
 });
 
 /**
  * Download vanilla slideshow
  */
-router.get("/download-vanilla-slideshow", function(req, res) {
-    res.download("../client/views/demos/vanilla-slideshow.rar");
-});
+// router.get("/download-vanilla-slideshow", function(req, res) {
+//     res.download("../client/views/demos/vanilla-slideshow.rar");
+// });
 
 
 module.exports = router;
