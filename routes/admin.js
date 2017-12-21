@@ -1,7 +1,7 @@
 var app             = require("express");
-var router          = app.Router();
-var blog            = require("../models/blog");
-var User            = require("../models/user");
+var router = app.Router();
+var blog   = require("../models/blog");
+var User   = require("../models/user");
 
 /**
  * Admin Middleware
