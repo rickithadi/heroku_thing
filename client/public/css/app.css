@@ -84,7 +84,8 @@ footer {
   padding-bottom: 50px;
   border-bottom : 1px dotted #b70000; }
   #main-container .mb-container:last-child {
-    border: none; }
+    padding-bottom: 10%;
+    border        : none; }
   #main-container .mb-container a {
     color          : #ffffff;
     text-decoration: none; }
@@ -132,6 +133,7 @@ footer {
 
   a.btn {
     display              : inline-block;
+    width                : 100px;
     color                : rgb(241, 117, 117);
     background-color     : rgb(0, 0, 0);
     text-transform       : uppercase;

@@ -5,15 +5,13 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>http://dimitrimikadze.com/</loc>
+  <loc>http://rickithadi.com/</loc>
 </url>
-<url>
-    <loc>http://dimitrimikadze.com/demos/vanilla-slideshow</loc>
-</url>
+
 
 <% blogs.forEach(function(blog) { %>
     <url>
-        <loc>http://dimitrimikadze.com/blog/programming/<%= blog.short_name.replace(new RegExp(" ", "g"), "-") %>/<%=blog._id%></loc>
+        <loc>http://rickithadi.com/blog/programming/<%= blog.short_name.replace(new RegExp(" ", "g"), "-") %>/<%=blog._id%></loc>
     </url>
 <% }); %>
 
