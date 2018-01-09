@@ -88,7 +88,7 @@ router.get("/blog/programming/:name/:id", function(req, res) {
            blog : blog,
            desc : blog.short_desc,
            url  : "/blog/programming/" + name + "/" + id
-       })
+       });
     });
 });
 

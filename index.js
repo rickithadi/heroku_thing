@@ -1,17 +1,17 @@
 var express         = require("express");
 // var helmet 	    = require('helmet');
-var app             = express();
-var mongoose        = require("mongoose");
-var bodyParser      = require("body-parser");
-var morgan          = require("morgan");
-var config          = require("./config/config");
+var app        = express();
+var mongoose   = require("mongoose");
+var bodyParser = require("body-parser");
+var morgan     = require("morgan");
+var config     = require("./config/config");
 
-var session         = require("express-session");
-var cookieParser    = require("cookie-parser");
-var flash           = require("connect-flash");
-var passport        = require("passport");
-var LocalStrategy   = require("passport-local").Strategy;
-var User            = require("./models/user");
+var session       = require("express-session");
+var cookieParser  = require("cookie-parser");
+var flash         = require("connect-flash");
+var passport      = require("passport");
+var LocalStrategy = require("passport-local").Strategy;
+var User          = require("./models/user");
 
 // configuration
 mongoose.connect(config.database);
@@ -38,8 +38,8 @@ app.use(morgan("dev"));
 
 app.use(cookieParser());
 app.use(session({
-    secret: config.secret,
-    resave: false,
+    secret           : config.secret,
+    resave           : false,
     saveUninitialized: false
 }));
 app.use(flash());
@@ -90,7 +90,7 @@ passport.use(new LocalStrategy({
 // post auth
 app.post('/login', passport.authenticate('local', {
     failureRedirect: '/login',
-    failureFlash: true }), function(req, res) {
+    failureFlash   : true }),  function(req, res) {
     if (req.body.remember) {
         req.session.cookie.maxAge = 1000 * 60 * 3;
     } else {
@@ -117,7 +117,7 @@ app.use("/", require("./routes"));
 app.use("/admin", require("./routes/admin"));
 //app.use("/test", require("./routes/testUser"));
 
-var port = process.env.PORT || 3000;
+var port   = process.env.PORT || 8080;
 var server = app.listen(port, function() {
     var host = server.address().address;
     var port = server.address().port;
