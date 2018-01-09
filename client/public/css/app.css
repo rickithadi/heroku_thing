@@ -12,13 +12,13 @@ body, html {
   
   
   @keyframes animatedBackground {
-      from { background-position: 0 0; }
-      to { background-position: -100% 0; }
+      from { background-position:100px 280px; }
+      to { background-position: -10000px 280px; }
       
     }
 @-webkit-keyframes backgroundScroll {
-    from {background-position: 0 0;}
-    to {background-position: 180px 0px;}
+    from {background-position: 100px 280px;}
+    to {background-position: -10000px 280px;}
     }
   body {
    
@@ -30,10 +30,10 @@ body, html {
     background-color     : rgb(0, 0, 0);
     background-attachment: fixed;
     font-family          : 'PT Sans', sans-serif;
-    background-position  : 0px 0px;
+    background-position  : 100px 280px;
     background-repeat    : repeat-x;
     background-image     : url("../images/spaceboi.jpg");
-    animation            : animatedBackground 75s linear infinite;
+    animation            : animatedBackground 400s linear infinite;
 
   
  }
@@ -84,11 +84,12 @@ footer {
 
 /* Main Container */
 #main-container #mb-container {
-  margin   : 200px auto 0 auto;
-  max-width: 960px;
-  color    : #ffffff; }
+  margin     : 60px auto 40px auto;
+  margin-left: 10%;
+  max-width  : 960px;
+  color      : #ffffff; }
 #main-container .mb-container {
-  margin        : 0 auto;
+  margin        : 20 auto;
   max-width     : 600px;
   text-align    : center;
   margin-bottom : 50px;
