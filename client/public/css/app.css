@@ -39,7 +39,7 @@ body, html {
  }
 
   img {
-    border-radius: 50%;
+    border-radius: 100%;
 }
 .dancing {
   font-family: 'Dancing Script', cursive; }
@@ -82,10 +82,24 @@ footer {
       footer .social-icons a:hover {
         color: #ffffff; }
 
+
+
+  #home-container #mb-container {
+    margin     : 80px auto 40px auto;
+    margin-left: 20%;
+    max-width  : 960px;
+    color      : #ffffff; }
+    #home-container #text-container {
+      margin     : -180px auto 40px auto;
+      margin-left: 20%;
+      max-width  : 960px;
+      color      : #ffffff; }
+  
+
 /* Main Container */
 #main-container #mb-container {
   margin     : 60px auto 40px auto;
-  margin-left: 10%;
+  margin-left: 35%;
   max-width  : 960px;
   color      : #ffffff; }
 #main-container .mb-container {
@@ -220,5 +234,8 @@ footer {
           border-bottom-width  : 1px;
         }
 
-  
+        textarea {
+          width : 300px;
+          height: 150px;
+        }
 /*# sourceMappingURL=app.css.map */
