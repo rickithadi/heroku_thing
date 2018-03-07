@@ -41,6 +41,9 @@ body, html {
   img {
     border-radius: 100%;
     border       : 1px solid #f07878;
+    margin       : 0;
+    padding      : 0;
+   
 }
 .dancing {
   font-family: 'Dancing Script', cursive; }
