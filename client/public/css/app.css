@@ -34,15 +34,19 @@ body, html {
     background-repeat    : repeat-x;
     background-image     : url("../images/spaceboi.jpg");
     animation            : animatedBackground 400s linear infinite;
+    max-width: 100%;
+    height: auto;
 
   
  }
 
   img {
     border-radius: 100%;
-    border       : 1px solid #f07878;
+    border       : 1px solid #000000;
     margin       : 0;
     padding      : 0;
+    max-width: 100%;
+    height: auto;
    
 }
 .dancing {
@@ -69,8 +73,10 @@ header {
 
 /* Footer */
 footer {
+  position: relative;
+  margin-top: 850px; 
   text-align   : center;
-  margin-top   : 100px;
+ 
   margin-bottom: 50px; }
   footer p:first-child {
     font-size: 30px; }
@@ -90,12 +96,12 @@ footer {
 
   #home-container #mb-container {
     margin     : 80px auto 40px auto;
-    margin-left: 20%;
+    margin-left: 15%;
     max-width  : 960px;
     color      : #ffffff; }
     #home-container #text-container {
       margin     : -180px auto 40px auto;
-      margin-left: 20%;
+      margin-left: 40%;
       max-width  : 960px;
       color      : #ffffff; }
   
@@ -188,7 +194,7 @@ footer {
 
     a.navbtn {
       display              : inline-block;
-      width                : 100px;
+      width                : 80px;
       color                : rgb(0, 0, 0);
       background-color     : rgb(255, 255, 255);
       text-transform       : uppercase;
